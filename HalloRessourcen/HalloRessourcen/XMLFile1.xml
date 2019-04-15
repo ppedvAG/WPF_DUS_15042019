@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dinge xmlns:sitz="http://ppedv.de/2019/Sitzbänke" xmlns:geld="http://ppedv.de/2019/Geldbank" >
+  <sitz:Bank>
+    <Material>Holz</Material>
+
+  </sitz:Bank>
+  <geld:Bank>
+    <BLZ>87278324</BLZ>
+    <Addresse>Bankstrasse 16,dekjfnew</Addresse>
+  </geld:Bank>
+  <Bank xmlns="http://ppedv.de/2019/Geldbank">
+    <BLZ>87278324</BLZ>
+    <Addresse>Bankstrasse 16,dekjfnew</Addresse>
+  </Bank>
+  <Bank xmlns="http://ppedv.de/2019/Sitzbänke">
+    <Material>Holz</Material>
+    <Sitzplätze>4</Sitzplätze>
+  </Bank>
+  <Bank xmlns="http://ppedv.de/2019/Sitzbänke">
+    <Material>Holz</Material>
+    <Sitzplätze>4</Sitzplätze>
+  </Bank>
+  <Bank xmlns="http://ppedv.de/2019/Sitzbänke">
+    <Material>Holz</Material>
+    <Sitzplätze>4</Sitzplätze>
+  </Bank>
+  <Bank xmlns="http://ppedv.de/2019/Sitzbänke">
+    <Material>Holz</Material>
+    <Sitzplätze>4</Sitzplätze>
+  </Bank>
+  <Bank xmlns="http://ppedv.de/2019/Sitzbänke">
+    <Material>Holz</Material>
+    <Sitzplätze>4</Sitzplätze>
+  </Bank>
+
+</Dinge>

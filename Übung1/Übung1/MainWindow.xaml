@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Übung1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="400">
+        Title="MainWindow" Height="350" Width="400" MinWidth="300">
     <TabControl>
         <TabItem Header="Page 1" IsSelected="False">
             <Grid Margin="4">
@@ -38,7 +38,7 @@
                 <TextBox Margin="4" Text="c:\" Grid.Column="1" Grid.Row="3" />
                 <Button Margin="4" Grid.Column="2" Grid.Row="3">Browse</Button>
 
-                <WrapPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" 
+                <WrapPanel Background="Aqua" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" 
                            HorizontalAlignment="Center">
                     <Button Margin="4" Padding="4,2" Content="OK">
                         <Button.Background>
