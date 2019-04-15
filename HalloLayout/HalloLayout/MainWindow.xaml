@@ -13,13 +13,80 @@
             <Ellipse Height="30" Width="50" Fill="Yellow" 
                      Canvas.Left="50" Canvas.Top="50" Panel.ZIndex="-1"/>
         </Canvas>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
+        <Grid ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="1">Hallo</Button>
+            <Label Grid.Row="1">Name</Label>
+            <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+        </Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Auto"
+                      PanningMode="Both">
+            <StackPanel>
+                <Button>Button</Button>
+                <Button>Button</Button>
+                <Button FontSize="18">Button</Button>
+                <Button>Button</Button>
+                <StackPanel Orientation="Horizontal">
+                    <Button>Button</Button>
+                    <Button>Button</Button>
+                    <Button>Button</Button>
+                    <Button>Button</Button>
+                    <Button>Button</Button>
+                </StackPanel>
+                <Button>Button</Button>
+                <Button>Button</Button>
+                <Button>Button</Button>
+            </StackPanel>
+        </ScrollViewer>
+        <WrapPanel Orientation="Horizontal">
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+            <Button>Button</Button>
+        </WrapPanel>
+        <Viewbox>
+            <!--<Calendar/>-->
+            <CheckBox>Check</CheckBox>
+        </Viewbox>
+        <Border CornerRadius="12" BorderThickness="8">
+            <Border.BorderBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Aqua"/>
+                    <GradientStop Color="Lime" Offset="0.3"/>
+                    <GradientStop Color="DeepPink" Offset="0.6"/>
+                    <GradientStop Color="Yellow" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Button>Button</Button>
+        </Border>
+        <DockPanel>
+            <Button DockPanel.Dock="Top">Oben</Button>
+            <Button DockPanel.Dock="Left">Links</Button>
+            <Button DockPanel.Dock="Bottom">Unten</Button>
+            <Button DockPanel.Dock="Right">Rechts</Button>
+            <Button DockPanel.Dock="Top">Oben 2</Button>
+            <Button>Center</Button>
+        </DockPanel>
+        <InkCanvas />
+        <Button>
+            <StackPanel>
+                <CheckBox>lwekjf</CheckBox>
+                <TextBlock>kwejrng</TextBlock>
+            </StackPanel>
+        </Button>
+
     </UniformGrid>
 </Window>
