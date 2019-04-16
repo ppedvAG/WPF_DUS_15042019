@@ -6,10 +6,19 @@
     <Application.Resources>
 
         <DataTemplate x:Key="bookTemplate">
-            <StackPanel>
-                <TextBlock Text="{Binding Path=title}"/>
-                <Calendar SelectedDate="{Binding Path=publishedDate}" FontSize="10"/>
-            </StackPanel>
+            <Border BorderThickness="4" BorderBrush="Green" CornerRadius="6">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{Binding Path=title}"/>
+                    <TextBlock Grid.Row="1" Text="{Binding Path=publishedDate}" FontSize="10"/>
+                    <TextBlock Grid.Row="2" Text="{Binding Path=pages,StringFormat=Seiten:{0}}" FontSize="10"/>
+                </Grid>
+            </Border>
         </DataTemplate>
 
     </Application.Resources>
