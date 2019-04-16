@@ -82,9 +82,11 @@
         </DockPanel>
         <InkCanvas />
         <Button>
-            <StackPanel>
-                <CheckBox>lwekjf</CheckBox>
-                <TextBlock>kwejrng</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Ellipse Fill="Red" Height="32" Width="32"/>
+                <TextBlock Margin="10" VerticalAlignment="Center">Japan</TextBlock>
+                <Ellipse Fill="Red" Height="32" Width="32"/>
+
             </StackPanel>
         </Button>
 
