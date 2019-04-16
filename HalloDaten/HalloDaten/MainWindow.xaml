@@ -7,22 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <DockPanel DockPanel.Dock="Top" Margin="20">
-            <Button DockPanel.Dock="Right" Padding="28,8" Margin="12">Suchen</Button>
-            <TextBox Margin="12" />
+        <DockPanel DockPanel.Dock="Top" Margin="20" Background="Aqua">
+            <Button Click="LoadBooks" DockPanel.Dock="Right" Padding="28,8" Margin="12">Suchen</Button>
+            <TextBox Name="suchTb" Margin="12" />
         </DockPanel>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="2*"/>
-
             </Grid.ColumnDefinitions>
             <ListBox />
-            <GridSplitter VerticalAlignment="Stretch" Grid.Column="1" Width="3"/>
+            <GridSplitter VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Width="3"/>
             <DockPanel Grid.Column="2">
 
-                <Grid DockPanel.Dock="Top">
+                <Grid DockPanel.Dock="Top" ShowGridLines="True">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
@@ -40,7 +39,7 @@
                     <DatePicker Grid.Row="3"/>
 
                     <Label Grid.Column="1">Autoren</Label>
-                    <ListBox Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Margin="4"/>
+                    <ListBox Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" />
                 </Grid>
                 <Label DockPanel.Dock="Top">Beschreibung</Label>
                 <TextBox TextWrapping="Wrap" Margin="4" />

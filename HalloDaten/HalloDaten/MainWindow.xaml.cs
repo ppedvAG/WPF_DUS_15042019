@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +24,16 @@ namespace HalloDaten
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void LoadBooks(object sender, RoutedEventArgs e)
+        {
+            using (var wc = new WebClient())
+            {
+                var url = $"https://www.googleapis.com/books/v1/volumes?q={suchTb.Text}";
+                var json = wc.DownloadString(url);
+                MessageBox.Show(json);
+            }
         }
     }
 }
