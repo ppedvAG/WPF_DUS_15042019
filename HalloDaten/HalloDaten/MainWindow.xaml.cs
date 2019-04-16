@@ -25,7 +25,7 @@ namespace HalloDaten
                 var json = wc.DownloadString(url);
                 var bookResult = JsonConvert.DeserializeObject<BookResults>(json);
 
-                booksLb.ItemsSource = bookResult.items.Select(x => x.volumeInfo);
+                    booksLb.ItemsSource = bookResult.items.Select(x => x.volumeInfo);
             }
         }
     }

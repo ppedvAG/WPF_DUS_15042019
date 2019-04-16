@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <DockPanel DockPanel.Dock="Top" Margin="20" Background="Aqua">
+            <Image Stretch="None" DockPanel.Dock="Left" Source="Assets/book_picture.png"/>
             <Button Click="LoadBooks" DockPanel.Dock="Right" Padding="28,8" Margin="12">Suchen</Button>
             <TextBox Name="suchTb" Margin="12" />
         </DockPanel>
@@ -17,7 +18,7 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <ListBox Name="booksLb"  ItemTemplate="{StaticResource bookTemplate}"/>
+            <ListBox HorizontalContentAlignment="Stretch" Name="booksLb"  ItemTemplate="{StaticResource bookTemplate}"/>
             <GridSplitter VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Width="3"/>
             <DockPanel Grid.Column="2">
 
@@ -27,6 +28,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
+                        <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
@@ -42,6 +44,7 @@
                     <ListBox Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" ItemsSource="{Binding ElementName=booksLb,Path=SelectedItem.authors}" />
                 </Grid>
                 <Label DockPanel.Dock="Top">Beschreibung</Label>
+                <ContentPresenter DockPanel.Dock="Top"  ContentTemplate="{StaticResource bookTemplate}" Content="{Binding ElementName=booksLb,Path=SelectedItem}" Height="Auto" />
                 <TextBox Name="beschTb" TextWrapping="Wrap" Margin="4"  Text="{Binding ElementName=booksLb,Path=SelectedItem.subtitle}"/>
             </DockPanel>
         </Grid>

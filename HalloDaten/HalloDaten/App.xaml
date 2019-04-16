@@ -5,18 +5,37 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
-        <DataTemplate x:Key="bookTemplate">
+        <DataTemplate x:Key="bookTemplate" >
             <Border BorderThickness="4" BorderBrush="Green" CornerRadius="6">
-
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="{Binding Path=title}"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{Binding Path=title}" FontWeight="Bold" MaxWidth="200"/>
                     <TextBlock Grid.Row="1" Text="{Binding Path=publishedDate}" FontSize="10"/>
-                    <TextBlock Grid.Row="2" Text="{Binding Path=pages,StringFormat=Seiten:{0}}" FontSize="10"/>
+                    <TextBlock Grid.Row="2" Text="{Binding Path=pageCount,StringFormat=Seiten: {0}}" FontSize="10"/>
+                    <Image Stretch="None" Grid.Column="1">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding language}" Value="de">
+                                        <Setter Property="Source" Value="Assets/flag_germany.png"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding language}" Value="en">
+                                        <Setter Property="Source" Value="Assets/flag_great_britain.png"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                    <Image Stretch="None" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Source="{Binding imageLinks.smallThumbnail}" />
+
                 </Grid>
             </Border>
         </DataTemplate>
