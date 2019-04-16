@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:HalloDaten"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <DataTemplate x:Key="bookTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding Path=title}"/>
+                <Calendar SelectedDate="{Binding Path=publishedDate}" FontSize="10"/>
+            </StackPanel>
+        </DataTemplate>
+
     </Application.Resources>
 </Application>

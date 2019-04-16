@@ -17,11 +17,11 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <ListBox />
+            <ListBox Name="booksLb"  ItemTemplate="{StaticResource bookTemplate}"/>
             <GridSplitter VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Width="3"/>
             <DockPanel Grid.Column="2">
 
-                <Grid DockPanel.Dock="Top" ShowGridLines="True">
+                <Grid DockPanel.Dock="Top" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
@@ -34,15 +34,15 @@
 
                     </Grid.RowDefinitions>
                     <Label>Titel</Label>
-                    <TextBox Grid.Row="1"/>
+                    <TextBox Grid.Row="1" Text="{Binding ElementName=booksLb,Path=SelectedItem.title}"/>
                     <Label Grid.Row="2">Published Date</Label>
-                    <DatePicker Grid.Row="3"/>
+                    <DatePicker Grid.Row="3" SelectedDate="{Binding ElementName=booksLb,Path=SelectedItem.publishedDate}"/>
 
                     <Label Grid.Column="1">Autoren</Label>
-                    <ListBox Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" />
+                    <ListBox Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" ItemsSource="{Binding ElementName=booksLb,Path=SelectedItem.authors}" />
                 </Grid>
                 <Label DockPanel.Dock="Top">Beschreibung</Label>
-                <TextBox TextWrapping="Wrap" Margin="4" />
+                <TextBox Name="beschTb" TextWrapping="Wrap" Margin="4"  Text="{Binding ElementName=booksLb,Path=SelectedItem.subtitle}"/>
             </DockPanel>
         </Grid>
     </DockPanel>
