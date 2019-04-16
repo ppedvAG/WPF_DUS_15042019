@@ -16,7 +16,7 @@
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom" 
-                   Height="23" Background="DarkGreen"/>
+                   Height="23" Background="#00BEFF"/>
 
         <Grid>
             <Grid.ColumnDefinitions>
