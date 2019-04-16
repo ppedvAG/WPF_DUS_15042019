@@ -7,19 +7,19 @@
 
         <DataTemplate x:Key="bookTemplate" >
             <Border BorderThickness="4" BorderBrush="Green" CornerRadius="6">
-                <Grid>
+                <Grid ShowGridLines="False">
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="{Binding Path=title}" FontWeight="Bold" MaxWidth="200"/>
-                    <TextBlock Grid.Row="1" Text="{Binding Path=publishedDate}" FontSize="10"/>
-                    <TextBlock Grid.Row="2" Text="{Binding Path=pageCount,StringFormat=Seiten: {0}}" FontSize="10"/>
+                    <TextBlock Text="{Binding Path=title}" FontWeight="Bold" MaxWidth="200" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="1" Text="{Binding Path=publishedDate}" FontSize="10" VerticalAlignment="Top"/>
+                    <TextBlock Grid.Row="2" Text="{Binding Path=pageCount,StringFormat=Seiten: {0}}" FontSize="10" VerticalAlignment="Top"/>
                     <Image Stretch="None" Grid.Column="1">
                         <Image.Style>
                             <Style TargetType="Image">
