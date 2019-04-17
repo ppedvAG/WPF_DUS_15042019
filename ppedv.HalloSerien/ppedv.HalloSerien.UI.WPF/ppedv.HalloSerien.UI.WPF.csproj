@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\PeopleViewModel.cs" />
     <Compile Include="Views\PeopleView.xaml.cs">
       <DependentUpon>PeopleView.xaml</DependentUpon>
     </Compile>
@@ -100,6 +101,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.HalloSerien.Logic\ppedv.HalloSerien.Logic.csproj">
+      <Project>{5a627b45-c297-4997-a2dd-9357bdd86a6d}</Project>
+      <Name>ppedv.HalloSerien.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.HalloSerien.Model\ppedv.HalloSerien.Model.csproj">
+      <Project>{5f6c0dc0-cb0c-40c1-9c4b-feb3c283fd64}</Project>
+      <Name>ppedv.HalloSerien.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll">
+      <Link>EntityFramework.SqlServer.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

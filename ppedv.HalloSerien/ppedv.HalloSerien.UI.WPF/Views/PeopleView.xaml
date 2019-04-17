@@ -4,9 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ppedv.HalloSerien.UI.WPF.Views"
+             xmlns:vm="clr-namespace:ppedv.HalloSerien.UI.WPF.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
+    <UserControl.DataContext>
+        <vm:PeopleViewModel/>
+    </UserControl.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -14,7 +17,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <DataGrid />
+        <DataGrid ItemsSource="{Binding PeopleList}" />
 
         <GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Stretch"/>
 
