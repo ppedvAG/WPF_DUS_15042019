@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.HalloSerien.Data.EF.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.HalloSerien.Logic", "ppedv.HalloSerien.Logic\ppedv.HalloSerien.Logic.csproj", "{5A627B45-C297-4997-A2DD-9357BDD86A6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.HalloSerien.UI.DevConsole", "ppedv.HalloSerien.UI.DevConsole\ppedv.HalloSerien.UI.DevConsole.csproj", "{BC1B2C92-BCE4-4DC3-97AF-74DC54EDF084}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5A627B45-C297-4997-A2DD-9357BDD86A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A627B45-C297-4997-A2DD-9357BDD86A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A627B45-C297-4997-A2DD-9357BDD86A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC1B2C92-BCE4-4DC3-97AF-74DC54EDF084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1B2C92-BCE4-4DC3-97AF-74DC54EDF084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1B2C92-BCE4-4DC3-97AF-74DC54EDF084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1B2C92-BCE4-4DC3-97AF-74DC54EDF084}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
