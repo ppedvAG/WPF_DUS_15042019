@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.HalloSerien.Data.EF\ppedv.HalloSerien.Data.EF.csproj" />
+    <ProjectReference Include="..\ppedv.HalloSerien.Model\ppedv.HalloSerien.Model.csproj" />
+  </ItemGroup>
+
+</Project>

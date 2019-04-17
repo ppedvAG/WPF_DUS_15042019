@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.HalloSerien.Data.EF",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.HalloSerien.Data.EF.Tests", "ppedv.HalloSerien.Data.EF.Tests\ppedv.HalloSerien.Data.EF.Tests.csproj", "{07E49B56-9193-4931-94DF-198443157BDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.HalloSerien.Logic", "ppedv.HalloSerien.Logic\ppedv.HalloSerien.Logic.csproj", "{5A627B45-C297-4997-A2DD-9357BDD86A6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{07E49B56-9193-4931-94DF-198443157BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07E49B56-9193-4931-94DF-198443157BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07E49B56-9193-4931-94DF-198443157BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A627B45-C297-4997-A2DD-9357BDD86A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A627B45-C297-4997-A2DD-9357BDD86A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A627B45-C297-4997-A2DD-9357BDD86A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A627B45-C297-4997-A2DD-9357BDD86A6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
