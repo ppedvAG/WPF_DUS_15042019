@@ -12,7 +12,7 @@
             <Button Click="LoadBooks" DockPanel.Dock="Right" Padding="28,8" Margin="12">Suchen</Button>
             <TextBox Name="suchTb" Margin="12" />
         </DockPanel>
-        <Grid>
+        <Grid >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition Width="Auto" />

@@ -11,6 +11,7 @@ namespace HalloRessourcen
         public MainWindow()
         {
             InitializeComponent();
+            double ffff = 7.9;
         }
 
         private void ChangeColor(object sender, RoutedEventArgs e)
