@@ -23,7 +23,7 @@ namespace ppedv.HalloSerien.UI.DevConsole
                 Console.WriteLine($"{series.Title}");
                 foreach (var ep in series.Episodes.OrderBy(x => x.Season))
                 {
-                    Console.WriteLine($"\t{ep.Title} {ep.Length.TotalMinutes} Minuten von {ep.Director.Name}");
+                    Console.WriteLine($"\t{ep.Title} ({ep.Length.TotalMinutes} Minuten) von {ep.Director.Name}");
                     Console.WriteLine($"\t\t{string.Join(", ", ep.Actors.Select(x => x.Name))}");
                 }
             }

@@ -39,7 +39,7 @@ namespace ppedv.HalloSerien.Logic
             var ep2 = new Episode()
             {
                 Title = "Aufladen",
-                Length = TimeSpan.FromMinutes(43),
+                Length = TimeSpan.FromMinutes(33),
                 Release = DateTime.Now.AddYears(-3),
                 Season = 1,
                 Director = p2
@@ -52,7 +52,7 @@ namespace ppedv.HalloSerien.Logic
             var ep3 = new Episode()
             {
                 Title = "Starten",
-                Length = TimeSpan.FromMinutes(43),
+                Length = TimeSpan.FromMinutes(86),
                 Release = DateTime.Now.AddYears(-3),
                 Season = 1,
                 Director = p3
@@ -63,8 +63,8 @@ namespace ppedv.HalloSerien.Logic
 
             var ep4 = new Episode()
             {
-                Title = "Ansturtz",
-                Length = TimeSpan.FromMinutes(43),
+                Title = "Absturz",
+                Length = TimeSpan.FromMinutes(11),
                 Release = DateTime.Now.AddYears(-3),
                 Season = 1,
                 Director = p1
