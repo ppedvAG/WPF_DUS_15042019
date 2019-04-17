@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.HalloSerien.Model", "ppedv.HalloSerien.Model\ppedv.HalloSerien.Model.csproj", "{5F6C0DC0-CB0C-40C1-9C4B-FEB3C283FD64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.HalloSerien.Data.EF", "ppedv.HalloSerien.Data.EF\ppedv.HalloSerien.Data.EF.csproj", "{D4590E95-F683-4748-AEE9-7DE25E11D51E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.HalloSerien.Data.EF.Tests", "ppedv.HalloSerien.Data.EF.Tests\ppedv.HalloSerien.Data.EF.Tests.csproj", "{07E49B56-9193-4931-94DF-198443157BDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{5F6C0DC0-CB0C-40C1-9C4B-FEB3C283FD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F6C0DC0-CB0C-40C1-9C4B-FEB3C283FD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F6C0DC0-CB0C-40C1-9C4B-FEB3C283FD64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4590E95-F683-4748-AEE9-7DE25E11D51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4590E95-F683-4748-AEE9-7DE25E11D51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4590E95-F683-4748-AEE9-7DE25E11D51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4590E95-F683-4748-AEE9-7DE25E11D51E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E49B56-9193-4931-94DF-198443157BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E49B56-9193-4931-94DF-198443157BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E49B56-9193-4931-94DF-198443157BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E49B56-9193-4931-94DF-198443157BDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
