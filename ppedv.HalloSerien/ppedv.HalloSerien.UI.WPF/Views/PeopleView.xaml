@@ -8,10 +8,13 @@
              xmlns:vm="clr-namespace:ppedv.HalloSerien.UI.WPF.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="boolToVis"/>
+    </UserControl.Resources>
     <UserControl.DataContext>
         <vm:PeopleViewModel/>
     </UserControl.DataContext>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -46,7 +49,7 @@
             <WrapPanel>
                 <Button Command="{Binding SaveCommand}" >Speichen</Button>
                 <Button Command="{Binding NewCommand}">Neu</Button>
-                <Button>Löschen</Button>
+                <Button Command="{Binding DeleteCommand}">Löschen</Button>
             </WrapPanel>
             <Label>Namen</Label>
             <TextBox Text="{Binding SelectedPerson.Name}"/>
@@ -55,6 +58,16 @@
                 <TextBlock VerticalAlignment="Center" Text="{Binding Age,StringFormat={x:Static rp:Texte.Age_Text}}"/>
             </StackPanel>
             <DatePicker SelectedDate="{Binding BirthDate,UpdateSourceTrigger=PropertyChanged}"/>
+            <Popup Placement="Center" IsOpen="{Binding ShowDialog}"  Height="200" >
+                <StackPanel Background="Moccasin">
+                    <TextBlock Text="{Binding DlgText}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Command="{Binding UserConfirmedCommand}">Ja</Button>
+                        <Button Command="{Binding UserDeniedCommand}">Neee</Button>
+                        <Button IsEnabled="False">Frag nie wieder!!!!</Button>
+                    </StackPanel>
+                </StackPanel>
+            </Popup>
         </StackPanel>
     </Grid>
 </UserControl>
