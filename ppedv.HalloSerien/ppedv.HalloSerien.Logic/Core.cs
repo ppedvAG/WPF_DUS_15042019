@@ -75,5 +75,17 @@ namespace ppedv.HalloSerien.Logic
             Repository.Add(s1);
             Repository.SaveAll();
         }
+
+        public int CalcAge(DateTime birthdate)
+        {
+            // Save today's date.
+            var today = DateTime.Today;
+            // Calculate the age.
+            var age = today.Year - birthdate.Year;
+            // Go back to the year the person was born in case of a leap year
+            if (birthdate > today.AddYears(-age)) age--;
+
+            return age;
+        }
     }
 }
