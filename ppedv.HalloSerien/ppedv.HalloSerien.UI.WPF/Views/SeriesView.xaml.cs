@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,18 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ppedv.HalloSerien.UI.WPF
+namespace ppedv.HalloSerien.UI.WPF.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SeriesView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SeriesView : UserControl
     {
-        public MainWindow()
+        public SeriesView()
         {
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de-DE");
-            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("de-AT");
-
             InitializeComponent();
         }
     }

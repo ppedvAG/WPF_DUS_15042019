@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ppedv.HalloSerien.UI.WPF"
         xmlns:views="clr-namespace:ppedv.HalloSerien.UI.WPF.Views"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:rp="clr-namespace:ppedv.HalloSerien.UI.WPF.Properties"
+        mc:Ignorable="d" Language="de"
+        Title="{x:Static rp:Texte.App_Title}" Height="450" Width="800">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Datei">
@@ -19,7 +20,7 @@
         <StatusBar Height="22" DockPanel.Dock="Bottom" Background="DarkMagenta"/>
         <TabControl>
             <TabItem Header="Serien / Episoden">
-                
+                <views:SeriesView/>
             </TabItem>
             <TabItem Header="Menschen">
                 <views:PeopleView/>
