@@ -2,6 +2,7 @@
 using ppedv.HalloSerien.Model;
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows.Input;
 
 namespace ppedv.HalloSerien.UI.WPF.ViewModels
@@ -42,6 +43,7 @@ namespace ppedv.HalloSerien.UI.WPF.ViewModels
 
         public int Age
         {
+            set { Debugger.Break(); }
             get
             {
                 return SelectedPerson == null ? 0 : core.CalcAge(SelectedPerson.BirthDate);
