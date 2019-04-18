@@ -1,11 +1,7 @@
 ﻿using ppedv.HalloSerien.Logic;
 using ppedv.HalloSerien.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace ppedv.HalloSerien.UI.WPF.ViewModels
@@ -16,7 +12,7 @@ namespace ppedv.HalloSerien.UI.WPF.ViewModels
         private Person selectedPerson;
 
 
-        public List<Person> PeopleList { get; set; }
+        public ObservableCollection<Person> PeopleList { get; set; }
 
         public Person SelectedPerson
         {
@@ -51,12 +47,26 @@ namespace ppedv.HalloSerien.UI.WPF.ViewModels
             }
         }
 
-        public SaveCommand SaveCommand { get; set; }
+        public SaveCommand SaveCommandOldSchool { get; set; }
+        public ICommand SaveCommand { get; set; }
+        public ICommand NewCommand { get; set; }
 
         public PeopleViewModel()
         {
-            PeopleList = new List<Person>(core.Repository.Query<Person>());
-            SaveCommand = new SaveCommand(core);
+            PeopleList = new ObservableCollection<Person>(core.Repository.Query<Person>());
+            SaveCommandOldSchool = new SaveCommand(core);
+
+            SaveCommand = new RelayCommand(o => core.Repository.SaveAll());
+
+            NewCommand = new RelayCommand(UserWantsToAddNewPerson);
+        }
+
+        private void UserWantsToAddNewPerson(object obj)
+        {
+            var p = new Person() { Name = "NEU", BirthDate = DateTime.Now };
+            core.Repository.Add(p);
+            PeopleList.Add(p);
+
         }
     }
 }

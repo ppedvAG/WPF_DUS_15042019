@@ -44,7 +44,7 @@
         <StackPanel Grid.Column="2">
             <WrapPanel>
                 <Button Command="{Binding SaveCommand}" >Speichen</Button>
-                <Button>Neu</Button>
+                <Button Command="{Binding NewCommand}">Neu</Button>
                 <Button>Löschen</Button>
             </WrapPanel>
             <Label>Namen</Label>
