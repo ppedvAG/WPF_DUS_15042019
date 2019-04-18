@@ -18,13 +18,32 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <DataGrid ItemsSource="{Binding PeopleList}" SelectedItem="{Binding SelectedPerson}" />
+        <DataGrid ItemsSource="{Binding PeopleList}" SelectedItem="{Binding SelectedPerson}"
+                  AutoGenerateColumns="False" CanUserAddRows="False" 
+                  CanUserDeleteRows="False" CanUserReorderColumns="False" 
+                  CanUserResizeRows="False"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="Name" Binding="{Binding Name}"/>
+                <DataGridTemplateColumn Width="Auto" Header="BirthDate" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding BirthDate,StringFormat=d}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding BirthDate}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
         <GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Stretch"/>
 
         <StackPanel Grid.Column="2">
             <WrapPanel>
-                <Button>Speichen</Button>
+                <Button Command="{Binding SaveCommand}" >Speichen</Button>
                 <Button>Neu</Button>
                 <Button>Löschen</Button>
             </WrapPanel>

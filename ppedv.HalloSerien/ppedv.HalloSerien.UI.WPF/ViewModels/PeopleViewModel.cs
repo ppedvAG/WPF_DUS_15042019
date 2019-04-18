@@ -51,10 +51,12 @@ namespace ppedv.HalloSerien.UI.WPF.ViewModels
             }
         }
 
+        public SaveCommand SaveCommand { get; set; }
+
         public PeopleViewModel()
         {
             PeopleList = new List<Person>(core.Repository.Query<Person>());
-
+            SaveCommand = new SaveCommand(core);
         }
     }
 }
