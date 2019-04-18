@@ -23,7 +23,7 @@
                   CanUserDeleteRows="False" CanUserReorderColumns="False" 
                   CanUserResizeRows="False"  >
             <DataGrid.Columns>
-                <DataGridTextColumn Width="*" Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Width="*" Header="Name" Binding="{Binding Name,UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridTemplateColumn Width="Auto" Header="BirthDate" >
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -32,7 +32,7 @@
                     </DataGridTemplateColumn.CellTemplate>
                     <DataGridTemplateColumn.CellEditingTemplate>
                         <DataTemplate>
-                            <DatePicker SelectedDate="{Binding BirthDate}"/>
+                            <DatePicker SelectedDate="{Binding BirthDate,UpdateSourceTrigger=PropertyChanged}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellEditingTemplate>
                 </DataGridTemplateColumn>
@@ -53,7 +53,7 @@
                 <Label>Birthdate</Label>
                 <TextBlock VerticalAlignment="Center" Text="{Binding Age,UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-            <DatePicker SelectedDate="{Binding BirthDate}"/>
+            <DatePicker SelectedDate="{Binding SelectedPerson.BirthDate}"/>
         </StackPanel>
     </Grid>
 </UserControl>
